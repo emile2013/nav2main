@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">nav2main</string>
+
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_skip">SkipActivity</string>
+    <string name="title_activity_normal">NormalActivity</string>
+</resources>

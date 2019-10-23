@@ -1,0 +1,1 @@
+include ':nav2main-lib', ':nav2main-plugin', ':agp-support-compat'

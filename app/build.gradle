@@ -1,0 +1,61 @@
+buildscript {
+
+    ext.kotlin_version = '1.3.50'
+    ext.agp_version = '3.5.1'
+    repositories {
+        mavenLocal()
+        google()
+        jcenter()
+
+
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:$agp_version"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+//apply plugin: 'com.yumibb.android.nav2main'
+
+android {
+    buildToolsVersion rootProject.ext.configuration.buildToolsVersion
+    compileSdkVersion rootProject.ext.configuration.compileSdkVersion
+    defaultConfig {
+        applicationId "com.yumibb.android.nav2main.demo"
+        minSdkVersion rootProject.ext.configuration.minSdkVersion.toInteger()
+        targetSdkVersion rootProject.ext.configuration.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation project(':nav2main-lib')
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'com.google.android.material:material:1.0.0'
+}
+
+
+//nav2main {
+//
+//    excludeActivities = ["com.yumibb.android.nav2main.demo.SkipActivity",
+//                         "com.yumibb.android.nav2main.demo.SplashActivity",
+//                         "com.yumibb.android.nav2main.demo.MainActivity"]
+//
+//    packagePres = ["com.yumibb"]
+//
+//}
