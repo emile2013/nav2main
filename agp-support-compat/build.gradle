@@ -1,0 +1,10 @@
+apply plugin: 'groovy'
+
+
+dependencies {
+    implementation gradleApi()//gradle sdk
+    implementation localGroovy()//groovy sdk
+    implementation "com.android.tools.build:gradle:${rootProject.ext.agp_version}"
+}
+
+apply from: rootProject.file('gradle/gradle-mvn-push.gradle')

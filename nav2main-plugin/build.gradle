@@ -1,0 +1,13 @@
+apply plugin: 'kotlin'
+
+dependencies {
+    implementation gradleApi()//gradle sdk
+    implementation 'com.android.tools.build:gradle:3.5.1'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
+    implementation 'org.javassist:javassist:3.20.0-GA'
+    implementation project(':agp-support-compat')
+}
+
+
+apply from: rootProject.file('gradle/gradle-mvn-push.gradle')

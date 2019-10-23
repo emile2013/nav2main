@@ -1,0 +1,31 @@
+apply plugin: 'com.android.library'
+
+android {
+    buildToolsVersion rootProject.ext.configuration.buildToolsVersion
+    compileSdkVersion rootProject.ext.configuration.compileSdkVersion
+
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.configuration.minSdkVersion.toInteger()
+        targetSdkVersion rootProject.ext.configuration.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "com.android.support:support-annotations:${rootProject.ext.google.support}"
+
+}
+
+apply from: rootProject.file('gradle/gradle-mvn-push.gradle')
