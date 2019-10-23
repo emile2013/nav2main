@@ -68,8 +68,14 @@ class App : Application() {
 - [sample](https://github.com/emile2013/nav2main/tree/master/sample)
 
 
-## test | 测试
+## Test
  After install sample , input These code in console : adb shell am start -n com.yumibb.android.nav2main.demo/.NormalActivity
+
+
+## Thanks
+- [booster](https://github.com/didi/booster)
+- [Sunzxyong](https://github.com/Sunzxyong)
+- [lizhangqu](https://github.com/lizhangqu)
 
 ## License
 
