@@ -79,7 +79,7 @@ class App : Application() {
 
 
 ## Test
- After install sample , input These code in console : adb shell am start -n com.yumibb.android.nav2main.demo/.NormalActivity
+ After install sample , input these code in console : adb shell am start -n com.yumibb.android.nav2main.demo/.NormalActivity
 
 
 ## Thanks
