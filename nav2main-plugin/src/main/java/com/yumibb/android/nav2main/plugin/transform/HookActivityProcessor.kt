@@ -16,7 +16,7 @@ import java.util.zip.ZipEntry
 /**
  * inject class for activity
  *
- * @author huangyuan
+ * @author y.huang
  * @since 2019-10-15
  */
 class HookActivityProcessor {

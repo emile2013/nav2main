@@ -8,6 +8,21 @@ import java.io.File
 
 
 /**
+ * See <a href="https://github.com/didi/booster/blob/5465f1d334efcf46067739381ec01a1a1afd9a1f/booster-android-gradle-api/src/main/kotlin/com/didiglobal/booster/gradle/TransformInvocation.kt">
+ *     https://github.com/didi/booster/blob/5465f1d334efcf46067739381ec01a1a1afd9a1f/booster-android-gradle-api/src/main/kotlin/com/didiglobal/booster/gradle/TransformInvocation.kt</a>
+ */
+
+
+
+/**
+ * Returns android extension
+ *
+ * @author johnsonlee
+ */
+inline fun <reified T : BaseExtension> Project.getAndroid(): T = extensions.getByName("android") as T
+
+
+/**
  * Represents the booster transform for
  *
  * @author johnsonlee
