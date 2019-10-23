@@ -46,11 +46,6 @@ class HookActivityProcessor {
 
         fun processJar(project: Project, classPool: ClassPool, jarFile: File, activities: Set<String>?) {
 
-            if (jarFile == null || !jarFile.exists()) {
-                return
-            }
-
-
             var optJar: File = File(jarFile.getParent(), "${jarFile.name}.opt")
 
             var file = JarFile(jarFile)
@@ -137,9 +132,7 @@ class HookActivityProcessor {
         }
 
         fun processFolderClass(project: Project, classPool: ClassPool, rootDir: File, excludeActivities: Set<String>?) {
-            if (rootDir == null || !rootDir.exists()) {
-                return
-            }
+
             rootDir.walk().forEach {
                 if (!it.isDirectory()) {
                     processClass(project, classPool, rootDir, it, excludeActivities)
